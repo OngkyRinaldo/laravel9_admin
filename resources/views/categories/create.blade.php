@@ -9,12 +9,11 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <form action="{{ route('categories.update', $category) }}" method="POST">
-                        @method('PUT')
+                    <form action="{{ route('categories.store') }}" method="POST">
                         @csrf
                         Name:
                         <br />
-                        <input type="text" name="name" value="{{ $category->name }}"
+                        <input type="text" name="name"
                             class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
                         <br /><br />
                         <button type="submit"
